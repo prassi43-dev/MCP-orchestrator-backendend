@@ -1,0 +1,22 @@
+# MCP Orchestrator Backend - run from this directory
+#
+# Required: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
+# Optional: OPENAI_API_KEY, SUPABASE_JWT_SECRET
+#
+# Create .env here or set env vars, then: docker compose up -d
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - SUPABASE_JWT_SECRET=${SUPABASE_JWT_SECRET:-}
+      - MCP_BASE_URL=${MCP_BASE_URL:-http://host.docker.internal:8001}
+      - LOGS_DIR=/app/logs
+    restart: unless-stopped

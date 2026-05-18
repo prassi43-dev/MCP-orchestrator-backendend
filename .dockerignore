@@ -1,0 +1,33 @@
+# Don't ship secrets or local env
+.env
+.env.*
+*.pem
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+.venv
+venv
+.mcp-orc
+*.egg-info
+.eggs
+dist
+build
+
+# Tests and tooling
+.pytest_cache
+.coverage
+htmlcov
+.idea
+.vscode
+.mypy_cache
+*.log
+logs
+
+# Git
+.git
+.gitignore
+*.md
+Dockerfile
+.dockerignore

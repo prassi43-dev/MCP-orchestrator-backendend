@@ -1,0 +1,73 @@
+{
+  "server": "default",
+  "metadata": {
+    "tool_count": 4,
+    "saved_at": "2025-11-25T07:01:59.890449",
+    "base_url": "http://0.0.0.0:8001/",
+    "http_base": "http://0.0.0.0:8001/"
+  },
+  "tools": [
+    {
+      "type": "function",
+      "function": {
+        "name": "default__get_country_data",
+        "description": "Fetch country data from prod_cceindex_countries index.",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "server_tool_name": "get_country_data"
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "default__get_average_data",
+        "description": "Fetch average data from prod_cceindex_avgs index",
+        "parameters": {
+          "properties": {
+            "year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "year"
+          ],
+          "type": "object"
+        }
+      },
+      "server_tool_name": "get_average_data"
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "default__search_full_data",
+        "description": "Search for full data from prod_cceindex_full index.",
+        "parameters": {
+          "properties": {
+            "year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "year"
+          ],
+          "type": "object"
+        }
+      },
+      "server_tool_name": "search_full_data"
+    },
+    {
+      "type": "function",
+      "function": {
+        "name": "default__get_attributes",
+        "description": "Fetch attributes from prod_cceindex_attrs index.",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "server_tool_name": "get_attributes"
+    }
+  ]
+}
