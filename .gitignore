@@ -38,6 +38,7 @@ htmlcov/
 # IDEs and editors
 .idea/
 .vscode/
+.refact/
 *.swp
 *.swo
 *~
